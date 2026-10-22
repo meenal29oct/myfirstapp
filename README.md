@@ -1,10 +1,31 @@
 # CSV Predictor
 
-A Streamlit app that lets you upload a CSV file, explore a column with a line, scatter or histogram chart,
-and fit a linear regression with two inputs and a target to predict values you type in.
+CSV Predictor is a Streamlit application for exploring CSV data and making predictions using linear regression.
 
-- Sample data: Seoul Bike Sharing Demand (UCI Machine Learning Repository), one row per hour.
-- Default model: Hour and Temperature predict Rented Bike Count. It explains roughly 40% of the variation,
-  so it is a rough planning guide, not a precise forecast.
-- Works with other CSV files that have at least three numeric columns.
-- Run locally: `pip install -r requirements.txt` then `streamlit run app.py`
+## Features
+
+- Upload and preview CSV files.
+- Explore numeric columns using line, scatter, and histogram charts.
+- Select two numeric input columns and one target column.
+- Fit a linear regression model.
+- Evaluate model performance using R² and mean absolute error (MAE).
+- Enter custom input values to generate predictions.
+- View warnings for unusual inputs and limitations of the model.
+
+## Sample dataset
+
+Seoul Bike Sharing Demand from the UCI Machine Learning Repository.
+
+The default model predicts Rented Bike Count using Hour and Temperature(°C).
+
+This is an introductory predictive model, not a production-grade demand forecasting system.
+
+## Other datasets
+
+The app also accepts other CSV files containing at least three usable numeric columns.
+
+## Run locally
+
+pip install -r requirements.txt
+
+streamlit run app.py
