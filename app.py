@@ -608,7 +608,7 @@ st.write(
 c1, c2, c3 = st.columns(3)
 
 # Target is independent of input selections.
-target = c3.selectbox(
+target = c1.selectbox(
     "Target",
     usable_cols,
     index=default_index(
@@ -623,7 +623,7 @@ options1 = [
     if c != target
 ]
 
-input1 = c1.selectbox(
+input1 = c2.selectbox(
     "Input 1",
     options1,
     index=default_index(
@@ -638,7 +638,7 @@ options2 = [
     if c != input1
 ]
 
-input2 = c2.selectbox(
+input2 = c3.selectbox(
     "Input 2",
     options2,
     index=default_index(
@@ -942,13 +942,13 @@ def sensible_default(column):
 val1 = v1.number_input(
     f"Value for {input1}",
     value=sensible_default(input1),
-    key="val1"
+    key=f"val1_{input1}"
 )
 
 val2 = v2.number_input(
     f"Value for {input2}",
     value=sensible_default(input2),
-    key="val2"
+    key=f"val2_{input2}"
 )
 
 # Preserve the training feature names and order
